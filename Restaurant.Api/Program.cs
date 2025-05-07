@@ -10,7 +10,20 @@ builder.Services.AddDbContext<ApplicationDbContext>(opts =>
 
 builder.Services.AddControllers();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Restaurant API V1");
+        c.RoutePrefix = "swagger";
+    });
+}
 
 using (var scope = app.Services.CreateScope())
 {
@@ -23,7 +36,6 @@ using (var scope = app.Services.CreateScope())
     {
         var jsonPath = Path.Combine(env.WebRootPath, "db", "db.json");
         var json = await File.ReadAllTextAsync(jsonPath);
-
         var seedData = JsonSerializer.Deserialize<List<SeedItem>>(
             json,
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
