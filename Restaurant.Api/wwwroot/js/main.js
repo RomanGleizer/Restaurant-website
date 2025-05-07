@@ -31,11 +31,11 @@ function getGoods() {
         .then(result => {
             allGoods = result.map(item => ({
                 id: item.id.toString(),
-                img: ``,
                 name: item.name,
                 price: item.price,
                 category: item.category,
                 label: item.label,
+                img: item.imagePath,
                 description: item.description
             }));
             renderCards(allGoods);
