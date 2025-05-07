@@ -1,0 +1,168 @@
+[
+  {
+    "id": "001",
+    "img": "img/salat01.jpg",
+    "name": "Греческий салат",
+    "price": "349",
+    "category": "салаты"
+  },
+  {
+    "id": "002",
+    "img": "img/salat02.jpg",
+    "name": "Салат Начос с кукурузой",
+    "price": "240",
+    "category": "салаты"
+  },
+  {
+    "id": "003",
+    "img": "img/salat03.jpg",
+    "name": "'Цезарь' с куриной грудкой",
+    "price": "689",
+    "category": "салаты"
+  },
+  {
+    "id": "004",
+    "img": "img/salat04.jpg",
+    "name": " Обычный салат с руколой",
+    "price": "259",
+    "category": "салаты"
+  },
+  {
+    "id": "021",
+    "img": "img/salat05.jpg",
+    "name": "Салат с креветками и авакадо",
+    "label": "Bestseller",
+    "description": "Bright Blue",
+    "price": "659",
+    "category": "салаты"
+  },
+  {
+    "id": "005",
+    "img": "img/sup05.jpg",
+    "name": "Кукурузная похлёбка",
+    "price": "320",
+    "category": "супы"
+  },
+  {
+    "id": "006",
+    "img": "img/sup04.jpg",
+    "name": "Суп Кампур Ала",
+    "price": "490",
+    "category": "супы"
+  },
+  {
+    "id": "007",
+    "img": "img/sup03.jpg",
+    "name": "Тоффу суп",
+    "label": "Bestseller",
+    "description": "Bright Blue",
+    "price": "760",
+    "category": "супы"
+  },
+  {
+    "id": "008",
+    "img": "img/sup02.jpg",
+    "name": "Суп Аям Клатем",
+    "price": "440",
+    "category": "супы"
+  },
+  {
+    "id": "009",
+    "img": "img/sup01.jpg",
+    "name": "Суп с курицей",
+    "price": "220",
+    "category": "супы"
+  },
+  {
+    "id": "010",
+    "img": "img/box-01.jpg",
+    "name": "Подарочный бокс с орехами",
+    "price": "1670",
+    "category": "подарочные боксы"
+  },
+  {
+    "id": "011",
+    "img": "img/box-02.jpg",
+    "name": "Подарочный бокс с печеньками",
+    "price": "1870",
+    "category": "подарочные боксы"
+  },
+  {
+    "id": "012",
+    "img": "img/box-03.jpg",
+    "name": "Подарочный бокс с кружкой",
+    "price": "1499",
+    "category": "подарочные боксы"
+  },
+  {
+    "id": "013",
+    "img": "img/menu01.jpg",
+    "name": "Закуска с креведками и авакадо",
+    "price": "768",
+    "category": "закуски"
+  },
+  {
+    "id": "014",
+    "img": "img/menu02.jpg",
+    "name": "Закуска с сыром Моцарело",
+    "price": "730",
+    "category": "закуски"
+  },
+  {
+    "id": "015",
+    "img": "img/menu03.jpg",
+    "name": "Закуска с лососем и черной икрой",
+    "price": "1270",
+    "category": "закуски"
+  },
+  {
+    "id": "016",
+    "img": "img/menu04.jpg",
+    "name": "закуска с сыром",
+    "price": "1180",
+    "category": "закуски"
+  },
+  {
+    "id": "017",
+    "img": "img/drink01.jpg",
+    "name": "Ежевика Колючая",
+    "price": "540",
+    "category": "напитки"
+  },
+  {
+    "id": "018",
+    "img": "img/drink02.jpg",
+    "name": "Латте с сакурой",
+    "price": "340",
+    "category": "напитки"
+  },
+  {
+    "id": "019",
+    "img": "img/drink03.jpg",
+    "name": "Крепкий мятный кофе Мокко",
+    "price": "420",
+    "category": "напитки"
+  },
+  {
+    "id": "020",
+    "img": "img/desert01.jpg",
+    "name": "Терамиссу с соусом из вишен",
+    "price": "345",
+    "category": "десерты"
+  },
+  {
+    "id": "022",
+    "img": "img/desert02.jpg",
+    "name": "Печение 'Бейлис' и сливочное парфе",
+    "price": "655",
+    "category": "десерты"
+  },
+  {
+    "id": "023",
+    "img": "img/desert03.jpg",
+    "name": "Парфе с клубничным желе",
+    "price": "542",
+    "category": "десерты"
+  }
+  
+]
