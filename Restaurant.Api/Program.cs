@@ -1,14 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using Restaurant.Api.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
+builder.Services.AddDbContext<ApplicationDbContext>(opts =>
+    opts.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
-app.UseHttpsRedirection();
+app.MapControllers();
+
+app.MapFallbackToFile("index.html");
 
 app.Run();

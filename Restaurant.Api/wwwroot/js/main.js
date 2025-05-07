@@ -22,9 +22,27 @@ function getMyCart(){
 
 let allGoods = [];
 
-function getGoods(){
-    fetch('db/db.json').then(res => res.json()).then(result => {allGoods = result;})
+function getGoods() {
+    fetch('/api/MenuItems')
+        .then(res => {
+            if (!res.ok) throw new Error('Network response was not ok');
+            return res.json();
+        })
+        .then(result => {
+            allGoods = result.map(item => ({
+                id: item.id.toString(),
+                img: ``,
+                name: item.name,
+                price: item.price,
+                category: item.category,
+                label: item.label,
+                description: item.description
+            }));
+            renderCards(allGoods);
+        })
+        .catch(err => console.error('Failed to load menu items:', err));
 }
+
 
 const cart = { 
     cartGoods: getMyCart(),
