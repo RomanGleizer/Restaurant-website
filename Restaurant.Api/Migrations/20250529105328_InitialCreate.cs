@@ -20,7 +20,8 @@ namespace Restaurant.Api.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
                     Price = table.Column<decimal>(type: "numeric", nullable: false),
-                    Category = table.Column<string>(type: "text", nullable: false)
+                    Category = table.Column<string>(type: "text", nullable: false),
+                    ImagePath = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

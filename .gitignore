@@ -57,6 +57,13 @@ dlldata.c
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 
+# Не пушить secrets
+/Restaurant.Api/appsettings.json
+
+# Если используешь UserSecrets (.NET)
+/Restaurant.Api/appsettings.Development.json
+/Restaurant.Api/secrets.json
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json

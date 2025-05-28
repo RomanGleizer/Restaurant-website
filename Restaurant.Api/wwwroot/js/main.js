@@ -1,4 +1,4 @@
-function dataToJson(data){
+﻿function dataToJson(data){
     return JSON.stringify(data);
 };
 
@@ -43,7 +43,6 @@ function getGoods() {
         .catch(err => console.error('Failed to load menu items:', err));
 }
 
-
 const cart = { 
     cartGoods: getMyCart(),
 
@@ -67,7 +66,7 @@ const cart = {
             trGood.dataset.id = id;
             trGood.innerHTML = `
             <td>${name}</td>
-            <td>${price}\ ₽</td>
+            <td>${price}\ в‚Ѕ</td>
             <td><button class = "cart-btn-minus new-year-btn" data-id = ${id}>-</button></td>
             <td>${count}</td>
             <td><button class = "cart-btn-plus new-year-btn" data-id = ${id}>+</button></td>
@@ -77,8 +76,8 @@ const cart = {
             cartTableGoods.append(trGood);
         })
         const totalPrice = this.cartGoods.reduce((sum, item) => sum + item.price * item.count, 0);
-        cartTableTotal.textContent = `${totalPrice}₽`;
-        cartCount.textContent = `${totalPrice}₽`;
+        cartTableTotal.textContent = `${totalPrice}в‚Ѕ`;
+        cartCount.textContent = `${totalPrice}в‚Ѕ`;
     },
     plusGood(id){
         const elem = this.cartGoods.find(el => el.id === id);
@@ -86,7 +85,7 @@ const cart = {
             elem.count++;
         }
         setCartData(dataToJson(this.cartGoods));
-        this.cartRender(); //перерисовка
+        this.cartRender(); //РїРµСЂРµСЂРёСЃРѕРІРєР°
     },
 
     minusGood(id){
@@ -173,22 +172,22 @@ logoLink.addEventListener('click', () => {
     menuPresent.classList.add('blokirovka');
 })
 
-function createCard(objCard){
+function createCard(objCard) {
     const card = document.createElement('div');
     card.className = "col-lg-3 col-sm-6";
     card.innerHTML = `
-    <div class = "goods-card">
-    <img src="db/${objCard.img}" alt="${objCard.name}" class="good-image">
-    <h3 class="goods-title">${objCard.name}</h3>
-    <button class="button goods-card-btn add-to-card" data-id= "${objCard.id}">
-    <span class="button-price">${objCard.price} ₽</span></button>
+    <div class="goods-card">
+        <img src="${objCard.img}" alt="${objCard.name}" class="good-image">
+        <h3 class="goods-title">${objCard.name}</h3>
+        <button class="button goods-card-btn add-to-card" data-id="${objCard.id}">
+            <span class="button-price">${objCard.price} ₽</span>
+        </button>
     </div>`;
-    card.addEventListener('click', () =>{
+    card.addEventListener('click', () => {
         cart.addCartId(objCard.id);
-    })
+    });
     return card;
 }
-
 
 
 function filterCard(field, value){
@@ -208,7 +207,7 @@ navigationLink.forEach((link) => {
             return;
         }
         else{
-            categoryTitle.textContent = 'все меню';
+            categoryTitle.textContent = 'РІСЃРµ РјРµРЅСЋ';
         }
         renderCards(allGoods);
         

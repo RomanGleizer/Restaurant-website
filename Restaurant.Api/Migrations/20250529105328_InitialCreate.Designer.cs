@@ -11,7 +11,7 @@ using Restaurant.Api.Data;
 namespace Restaurant.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250507043549_InitialCreate")]
+    [Migration("20250529105328_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -37,6 +37,10 @@ namespace Restaurant.Api.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")

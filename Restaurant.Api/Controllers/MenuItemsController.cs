@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Restaurant.Api.Data;
 using Restaurant.Api.Models;
+using Restaurant.Api.Services;
 
 namespace Restaurant.Api.Controllers;
 
@@ -51,5 +52,19 @@ public class MenuItemsController(ApplicationDbContext db) : ControllerBase
         _db.MenuItems.Remove(item);
         await _db.SaveChangesAsync();
         return NoContent();
+    }
+
+    [HttpPost("upload")]
+    public async Task<ActionResult<string>> UploadImage(IFormFile file, [FromServices] IObjectStorageService storageService)
+    {
+        if (file == null || file.Length == 0)
+            return BadRequest("File is empty");
+
+        using var stream = file.OpenReadStream();
+        var fileName = $"uploads/{Guid.NewGuid()}_{file.FileName}";
+
+        var url = await storageService.UploadFileAsync(stream, fileName);
+
+        return Ok(new { Url = url });
     }
 }
